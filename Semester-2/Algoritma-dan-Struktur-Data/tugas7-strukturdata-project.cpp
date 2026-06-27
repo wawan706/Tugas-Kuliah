@@ -58,3 +58,44 @@ int main() {
 
     return 0;
 }
+
+
+/*
+
+ALGORITMA suggestFriends(targetUser)
+INPUT: targetUser (string)
+OUTPUT: Menampilkan daftar teman yang disarankan
+
+1.  Dapatkan daftar teman langsung dari targetUser (sebut: myFriends)
+2.  IF targetUser tidak ditemukan DALAM database:
+        Tampilkan "User tidak ditemukan!"
+        RETURN
+    END IF
+
+3.  Tampilkan "Rekomendasi teman untuk targetUser:"
+4.  SET found = FALSE
+
+5.  FOR EACH friendOfUser (teman dari targetUser) IN myFriends:
+        
+        // Ambil daftar teman dari teman tersebut
+        Dapatkan daftar teman dari friendOfUser (sebut: potentialFriends)
+
+        FOR EACH fof (friend-of-friend) IN potentialFriends:
+
+            // Logika seleksi rekomendasi:
+            // 1. fof bukan diri sendiri (targetUser)
+            // 2. fof belum menjadi teman langsung (bukan bagian dari myFriends)
+            
+            IF fof != targetUser DAN fof TIDAK ADA DALAM myFriends:
+                Tampilkan fof
+                SET found = TRUE
+            END IF
+
+        END FOR
+    END FOR
+
+6.  IF found == FALSE:
+        Tampilkan "Tidak ada rekomendasi baru."
+    END IF
+
+*/
